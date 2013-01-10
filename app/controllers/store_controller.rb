@@ -3,6 +3,7 @@ class StoreController < ApplicationController
   def index
   	@products = Product.order(:title)
   	@count = page_view_counter
+    @cart = current_cart
   end
 
   def page_view_counter
