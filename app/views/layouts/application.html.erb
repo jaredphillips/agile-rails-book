@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pragprog Books Online Store</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<body class='<%= controller.controller_name %>'>
+		<div id="banner">
+			<%= image_tag("logo.png") %>
+			<%= @page_title || "Pragmatic Bookshelf" %>
+		</div>
+		<div id="columns">
+			<div id="side">
+				<ul>
+					<div id="date"><%= Time.now %></div>
+					<li><a href="http://www.....">Home</a></li>
+					<li><a href="http://www.....">Questions</a></li>
+					<li><a href="http://www.....">News</a></li>
+					<li><a href="http://www.....">Contact</a></li>
+				</ul>
+		  </div>
+      <div id="main">
+      <%= yield %>
+      <%= debug(params) if Rails.env.development? %>
+    </div>
+  </div>
+</body>
+</html>
