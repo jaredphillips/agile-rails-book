@@ -2,4 +2,3 @@ Agile Web Development with Rails
 
 Going through book/tutorial and pushing the code to Github. 
 
-Trying to fix the crappy HTML/SCSS :(
